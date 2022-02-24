@@ -2,5 +2,150 @@
 <html>
     <head>
         <title>Cheat Sheet</title>
+        <link href="resources/css/index.css" rel="stylesheet"/>
     </head>
+
+    <body>
+        <nav>
+            <img src="resources/photos/_24_00354.jpg"/>
+            <ul>
+                <li><a href="#html">HTML</a></li>
+                <li><a href="#css">CSS</a></li>
+                <li><a href="#git/bash">Git & Bash</a></li>
+            </ul>
+        </nav>
+
+        <head>
+            <h1>Zee's Cheat Sheet</h1>
+        </head>
+
+        <main>
+            <section id="html">
+                <h2>HTML</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <td class="tableTitle" colspan="3">Elements</td>
+                        </tr>
+                        <tr>
+                        <th scope="col">Name</th>
+                            <th scope="col">Tag</th>
+                            <th scope="col">Use Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Opening</th>
+                            <td><code>&lt;!DOCTYPE html&gt;</code></td>
+                            <td>Put at the beginning of an html document to tell the browser what to expect</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">html</th>
+                            <td><code>&lt;html&gt;content here&lt;/html&gt;</code></td>
+                            <td>Put around all of the html on the page. Opening tag should be just after DOCTYPE declaration, and closing tag should be the last thing in the file</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="css">
+                <h2>CSS</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <td class="tableTitle" colspan="4">Selectors</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Selector</th>
+                            <th scope="col">Code</th>
+                            <th scope="col">Use Description</th>
+                            <th scope="col">Outranks in Specificity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Type</th>
+                            <td>
+                                <code>p {<br>
+                                       [Declarations here]<br>
+                                    }</code>
+                                <p class="explanation">The above selector will select all p elements</p>
+                            </td>
+                            <td>Can replace p with the content of any html tag to select that all such tags</td>
+                            <td>Will override inherited properties only</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Descendant</th>
+                            <td><code>td p {<br>
+                                   [Declarations here]<br>
+                                }</code>
+                                <p class="explanation">The above selector will select only those p elements which are inside td elements (table cells)</p>
+                            </td>
+                            <td>Can replace td and p with any two elements to select for them instead. The first is always the parent, and the second is always the child</td>
+                            <td>Overrides inherited properties and Type selectors, so the <code>td p</code> selector overrides the <code>p</code> selector</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="git/bash">
+                <h2>Git & Bash</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <td colspan="3" class="tableTitle">Bash</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Command</th>
+                            <th scope="col">Example</th>
+                            <th scope="col">Usage Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Print Working Directory</th>
+                            <td><code>pwd</code></td>
+                            <td>Outputs the path to the current working directory from the base directory of the filesystem</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Change Directory</th>
+                            <td><code>cd [path]</code></td>
+                            <td>Changes directory to the directory given in <code>[path]</code> which should be a relative path from the current working directory</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table>
+                        <thead>
+                            <tr>
+                                <td colspan="3" class="tableTitle">Git</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">Command</th>
+                                <th scope="col">Example</th>
+                                <th scope="col">Usage Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Initiate</th>
+                                <td><code>git init</code></td>
+                                <td>Initiates a git repository in the current working directory</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Add</th>
+                                <td><code>add [files paths]</code><br><code>add resources/css/index.css resources/photos/html.png</code>
+                                <p class="explanation">Adds both index.css and html.png to the staging area</p></td>
+                                <td><code>[files paths]</code> should be a number of files or directories (or one) referenced by their relative paths from the current working directory and separated by spaces</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+            
+            <footer>
+                <p>© Zyra Álvarez Claudius</p>
+            </footer>
+    </body>
 </html>
