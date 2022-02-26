@@ -6,19 +6,23 @@
     </head>
 
     <body>
-        <nav>
+        <header>
+        <div id="me">
             <img src="resources/photos/_24_00354.jpg"/>
+        </div>
+        <h1>Zee's Cheat Sheet</h1>
+        </header>
+
+        
+
+        <nav>
             <ul>
                 <li><a href="#html">HTML</a></li>
                 <li><a href="#css">CSS</a></li>
-                <li><a href="#git/bash">Git & Bash</a></li>
+                <li><a href="#gitBash">Git & Bash</a></li>
             </ul>
         </nav>
-
-        <head>
-            <h1>Zee's Cheat Sheet</h1>
-        </head>
-
+        
         <main>
             <section id="html">
                 <h2>HTML</h2>
@@ -89,7 +93,7 @@
                 </table>
             </section>
 
-            <section id="git/bash">
+            <section id="gitBash">
                 <h2>Git & Bash</h2>
                 <table>
                     <thead>
@@ -105,12 +109,12 @@
                     <tbody>
                         <tr>
                             <th scope="row">Print Working Directory</th>
-                            <td><code>pwd</code></td>
+                            <td><code>$ pwd</code></td>
                             <td>Outputs the path to the current working directory from the base directory of the filesystem</td>
                         </tr>
                         <tr>
                             <th scope="row">Change Directory</th>
-                            <td><code>cd [path]</code></td>
+                            <td><code>$ cd [path]</code></td>
                             <td>Changes directory to the directory given in <code>[path]</code> which should be a relative path from the current working directory</td>
                         </tr>
                     </tbody>
@@ -130,12 +134,12 @@
                         <tbody>
                             <tr>
                                 <th scope="row">Initiate</th>
-                                <td><code>git init</code></td>
+                                <td><code>$ git init</code></td>
                                 <td>Initiates a git repository in the current working directory</td>
                             </tr>
                             <tr>
                                 <th scope="row">Add</th>
-                                <td><code>add [files paths]</code><br><code>add resources/css/index.css resources/photos/html.png</code>
+                                <td><code>$ add [files paths]</code><br><code>$ add resources/css/index.css resources/photos/html.png</code>
                                 <p class="explanation">Adds both index.css and html.png to the staging area</p></td>
                                 <td><code>[files paths]</code> should be a number of files or directories (or one) referenced by their relative paths from the current working directory and separated by spaces</td>
                             </tr>
