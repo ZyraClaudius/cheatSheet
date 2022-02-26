@@ -68,9 +68,12 @@ a[href="#css"] {
 
 
 section {
-    width: 100%;
+    box-sizing: content-box;
     padding: 20px 0;
-    margin-top: 50px;
+    margin: 50px auto;
+    height: 50vh;
+    width: 80vw;
+    overflow: scroll;
 }
 
 h2 {
